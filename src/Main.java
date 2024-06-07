@@ -8,6 +8,7 @@ public class Main {
         Light l1 = new Light(5, 5, false, "White");
         while(stop == false){
             System.out.println("Do you want to apply any changes? : " + dis);
+
             if(dis == 'n')
                 stop = true;
             else{
