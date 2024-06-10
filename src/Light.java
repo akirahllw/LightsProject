@@ -43,5 +43,7 @@ public class Light {
     public void setColor(String color) {
         this.color = color;
     }
-
+    public boolean canChangeColor(){
+        return false;
+    }
 }

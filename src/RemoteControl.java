@@ -13,7 +13,7 @@ public class RemoteControl {
             if (dis == 'n')
                 stop = true;
             else {
-                System.out.println("Which component do you want  to change: (p)ower, (b)rightness?" +
+                System.out.println("Which component do you want  to change (p)ower, (b)rightness?" +
                         "(t)urnOn/Off, (c)olor : ");
                 char change = scanner.next().charAt(0);
 
@@ -39,7 +39,25 @@ public class RemoteControl {
                             System.out.println("Invalid input, please enter on/off ");
                         }
                     case 'c':
-                        System.out.println()
+                        if (l1.canChangeColor()) {
+                            System.out.println("Choose the color you want to use (b)lue, (r)ed, (g)reen : ");
+                            char color = scanner.next().charAt(0);
+
+                            switch (color){
+                                case 'r':
+                                    l1.setColor("Red");
+                                case 'g':
+                                    l1.setColor("Green");
+                                case 'b':
+                                    l1.setColor("Blue");
+                                default:
+                                    System.out.println("Invalid option. Please choose Red, Green or blue");
+                            }
+                        }else {
+                            System.out.println("This light can't change color");
+                        }
+                    default:
+                        System.out.println("Invalid option, please pick any option you saw above");
                 }
             }
         }
