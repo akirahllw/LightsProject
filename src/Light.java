@@ -3,10 +3,10 @@ public class Light {
     private double power;
     private double brightness;
 
-    private boolean turnOn;
+    private String turnOn;
     private String color;
 
-    public Light(double power, double brightness, boolean turnOn,String color ){
+    public Light(double power, double brightness, String turnOn,String color ){
         this.power = power;
         this.brightness = brightness;
         this.turnOn = turnOn;
@@ -28,11 +28,11 @@ public class Light {
         this.brightness = brightness;
     }
 
-    public boolean isTurnOn() {
+    public String isTurnOn() {
         return turnOn;
     }
 
-    public void setTurnOn(boolean turnOn) {
+    public void setTurnOn(String turnOn) {
         this.turnOn = turnOn;
     }
 
