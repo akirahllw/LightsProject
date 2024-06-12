@@ -28,7 +28,7 @@ public class Light {
         this.brightness = brightness;
     }
 
-    public String isTurnOn() {
+    public String getTurnOn() {
         return turnOn;
     }
 
@@ -44,6 +44,10 @@ public class Light {
         this.color = color;
     }
     public boolean canChangeColor(){
+        return false;
+    }
+
+    public boolean canChangeTemperature(){
         return false;
     }
 }

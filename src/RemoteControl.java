@@ -4,6 +4,8 @@ public class RemoteControl {
     Scanner scanner = new Scanner(System.in);
     private boolean stop = false;
     Light l1 = new Light(5, 5, "Off", "White");
+    CristmasLight c1 = new CristmasLight(5,5,"Off", "White" , false);
+    RoomLight r1 = new RoomLight(5,5,"Off", "White", 10);
 
     public void controlLoop() {
         while (!stop) {
@@ -13,6 +15,9 @@ public class RemoteControl {
             if (dis == 'n')
                 stop = true;
             else {
+                System.out.println("Which one of the lights do you want to use? regular (l)ight, (c)ristmas light," +
+                        "(r)oom light : ");
+                char light = scanner.next().charAt(0);
                 System.out.println("Which component do you want  to change (p)ower, (b)rightness?" +
                         "(t)urnOn/Off, (c)olor : ");
                 char change = scanner.next().charAt(0);
