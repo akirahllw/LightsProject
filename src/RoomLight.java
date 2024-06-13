@@ -9,7 +9,7 @@ public class RoomLight extends Light{
         return temperature;
     }
 
-    public void setIsFlashing(boolean isFlashing){
+    public void setTemperature(double temperature){
         this.temperature = temperature;
     }
 

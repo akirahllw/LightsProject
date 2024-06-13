@@ -155,6 +155,54 @@ public class RemoteControl {
                                 System.out.println("Invalid option, please pick any option you saw above");
                         }
                         break;
+                    case 'r':
+                        System.out.println("Which component do you want  to change? (p)ower, (b)rightness" +
+                                " (t)urnOn/Off, t(e)mperature : ");
+                        char change3 = scanner.next().charAt(0);
+
+                        switch (change3) {
+                            case 'p':
+                                System.out.println("Enter new power (5 - max): ");
+                                double newPower = scanner.nextDouble();
+                                while (newPower > 5 || newPower < 0){
+                                    System.out.println("Invalid power, enter value between 0 and 5: ");
+                                    newPower = scanner.nextDouble();
+                                }
+                                r1.setPower(newPower);
+                                break;
+                            case 'b':
+                                System.out.println("Enter new brightness(5 - max): ");
+                                double newBrightness = scanner.nextDouble();
+                                while (newBrightness >5 || newBrightness < 0){
+                                    System.out.println("Invalid brightness, enter value between 0 and 5: ");
+                                    newBrightness = scanner.nextDouble();
+                                }
+                                r1.setBrightness(newBrightness);
+                                break;
+                            case 't':
+                                System.out.println("Turn On/Off the lights?: ");
+                                String onOff = scanner.next();
+                                if (onOff.equals("On") || onOff.equals("on")) {
+                                    r1.setTurnOn(onOff);
+                                } else if (onOff.equals("Off") || onOff.equals("off")) {
+                                    r1.setTurnOn(onOff);
+                                } else {
+                                    System.out.println("Invalid input, please enter on/off ");
+                                }
+                                break;
+                            case 'e':
+                                System.out.println("Enter new temperature(10 - max): ");
+                                double newTemperature = scanner.nextDouble();
+                                while (newTemperature >10 || newTemperature < 0){
+                                    System.out.println("Invalid temperature, enter value between 0 and 10: ");
+                                    newTemperature = scanner.nextDouble();
+                                }
+                                r1.setTemperature(newTemperature);
+                                break;
+                            default:
+                                System.out.println("Invalid option, please pick any option you saw above");
+                        }
+                        break;
                     default:
                         System.out.println("Invalid light selection, please choose regular (l)ight, (c)ristmas light, or (r)oom light");
                 }
