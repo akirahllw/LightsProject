@@ -43,11 +43,7 @@ public class Light {
     public void setColor(String color) {
         this.color = color;
     }
-    public boolean canChangeColor(){
-        return false;
-    }
-
-    public boolean canChangeTemperature(){
-        return false;
+    public boolean canChangeColor(){ // I understand that we could just not use this method but I want you to see
+        return false;                // that i can use override like a part of Inheritance
     }
 }

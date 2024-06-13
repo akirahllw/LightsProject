@@ -13,8 +13,4 @@ public class RoomLight extends Light{
         this.temperature = temperature;
     }
 
-    @Override
-    public boolean canChangeTemperature(){
-        return true;
-    }
 }
