@@ -13,7 +13,7 @@ public class Light {
         this.color = color;
     }
 
-    public double getPower(double power){
+    public double getPower(){
         return power;
     }
     public void setPower(double power) {
@@ -45,5 +45,10 @@ public class Light {
     }
     public boolean canChangeColor(){ // I understand that we could just not use this method but I want you to see
         return false;                // that i can use override like a part of Inheritance
+    }
+
+    public void isWorking(){
+        System.out.println("The light is shining with " + color + " color\n Current settings of the light: ");
+        System.out.println("Power: " + power + "\nBrightness: " + brightness);
     }
 }

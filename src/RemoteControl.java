@@ -49,8 +49,10 @@ public class RemoteControl {
                                 String onOff = scanner.next();
                                 if (onOff.equals("On") || onOff.equals("on")) {
                                     l1.setTurnOn(onOff);
+                                    l1.isWorking();
                                 } else if (onOff.equals("Off") || onOff.equals("off")) {
                                     l1.setTurnOn(onOff);
+                                    System.out.println("You turned off the light ");
                                 } else {
                                     System.out.println("Invalid input, please enter on/off ");
                                 }
@@ -112,6 +114,7 @@ public class RemoteControl {
                                     c1.setTurnOn(onOff);
                                 } else if (onOff.equals("Off") || onOff.equals("off")) {
                                     c1.setTurnOn(onOff);
+                                    System.out.println("You turned off the light ");
                                 } else {
                                     System.out.println("Invalid input, please enter on/off ");
                                 }
@@ -147,6 +150,7 @@ public class RemoteControl {
                                 }
                                 else if(flash.equals("off") || flash.equals("Off")){
                                     c1.setIsFlashing(false);
+                                    System.out.println("You turned off the light ");
                                 }else{
                                     System.out.println("Invalid option please choose on/off");
                                 }

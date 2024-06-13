@@ -17,4 +17,11 @@ public class CristmasLight extends Light{
     public boolean canChangeColor(){
         return true;
     }
+
+    @Override
+    public void isWorking(){
+        System.out.println("The light is shining with " + getColor() + " color\n Current settings of the light: ");
+        System.out.println("Power: " + getPower() + "\nBrightness: " + getBrightness());
+        System.out.println("Flashing: " + (isFlashing? "Yes" : "No"));
+    }
 }
